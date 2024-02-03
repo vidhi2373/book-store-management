@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookstore App</title>>
+</head>
+
+<body>
+  <h1>Welcome to the Bookstore</h1>
+
+  <div id="addCustomerFormContainer">
+    <h2>Register</h2>
+    <form id="addCustomerForm">
+      <label for="customerId">Customer ID:</label>
+      <input type="text" id="customerId" name="customerId" required>
+
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+
+      <button type="button" onclick="addCustomer()">Register</button>
+    </form>
+  </div>
+
+ 
+  <div id="loginFormContainer">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <label for="loginCustomerId">Customer ID:</label>
+      <input type="text" id="loginCustomerId" required>
+
+      <label for="loginPassword">Password:</label>
+      <input type="password" id="loginPassword" required>
+
+      <button type="button" onclick="login()">Login</button>
+    </form>
+    <p id="loginErrorMessage"></p>
+  </div>
+
+  
+  <div id="addBookFormContainer"style="display: none;">
+    <h2>Add a Book</h2>
+    <form id="addBookForm">
+      <label for="bookId">Book ID:</label>
+      <input type="text" id="bookId" required>
+      <br>
+      <label for="bookTitle">Title:</label>
+      <input type="text" id="bookTitle" required>
+      <br>
+      <label for="bookAuthor">Author:</label>
+      <input type="text" id="bookAuthor" required>
+      <br>
+      <label for="bookGenre">Genre:</label>
+      <input type="text" id="bookGenre" required>
+      <br>
+      <label for="bookQuantity">Quantity:</label>
+      <input type="number" id="bookQuantity" required>
+      <br>
+      <button id="addBookButton" onclick="addBook()">Add Book</button>
+      <p id="bookSuccessMessage"></p>
+      <p id="bookErrorMessage"></p>
+    </form>
+  </div>
+
+  
+  <div id="placeOrderFormContainer" style="display: none;">
+    <h2>Place an Order</h2>
+    <form id="placeOrderForm">
+      <label for="customerIdForOrder">Customer ID:</label>
+      <input type="text" id="customerIdForOrder" required>
+
+      <label for="bookIdForOrder">Book ID:</label>
+      <input type="text" id="bookIdForOrder" required>
+
+      <label for="orderQuantity">Quantity:</label>
+      <input type="number" id="orderQuantity" required>
+
+      <button type="button" onclick="placeOrder()">Place Order</button>
+      <p id="orderSuccessMessage"></p>
+      <p id="orderErrorMessage"></p>
+    </form>
+  </div>
+
+ 
+  <div id="getBooksFormContainer" style="display: none;">
+    <h2>Get Books</h2>
+    <form id="getBooksForm">
+      <button type="button" onclick="getBooks()">See Books</button>
+    </form>
+    <div id="booksResult"></div>
+  </div>
+
+  
+  <div id="getOrdersContainer" style="display: none;">
+    <button onclick="getCustomerData()">Get Orders</button>
+  </div>
+
+  
+  <div id="ordersResult"></div>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>
